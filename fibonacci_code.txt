@@ -1,0 +1,62 @@
+Sure! Here are some common ways to generate the Fibonacci series in different languages.
+
+---
+
+### **Python**
+
+```python
+# Fibonacci Series - Python
+
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+
+fibonacci(10)  # Prints first 10 Fibonacci numbers
+```
+
+---
+
+### **C**
+
+```c
+// Fibonacci Series - C
+
+#include <stdio.h>
+
+int main() {
+    int n = 10, a = 0, b = 1, next, i;
+    for(i = 0; i < n; i++) {
+        printf("%d ", a);
+        next = a + b;
+        a = b;
+        b = next;
+    }
+    return 0;
+}
+```
+
+---
+
+### **Java**
+
+```java
+// Fibonacci Series - Java
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 10, a = 0, b = 1;
+        for(int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+    }
+}
+```
+
+---
+
+If you have a specific language or want recursive version, let me know!
