@@ -5,7 +5,7 @@ pipeline {
             steps {
                 git url: 'https://github.com/poseidon139/qAInCICD',
                     branch: 'main',
-                    credentialsId: 'github-token'
+                    credentialsId: '6ef0ce35-81fc-4b78-b204-8a151ef447e5'
             }
         }
         stage('Build') {
