@@ -8,19 +8,16 @@ pipeline {
                     credentialsId: 'github-token'
             }
         }
-        stage('Build') {
-            steps {
-                echo 'Building the application...'
+
+        stage('PR review check') {
+            when {
+                expression {
+                    return env.CHANGE_ID != null
+                }
             }
-        }
-        stage('Test') {
             steps {
-                echo 'Running tests...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
+                echo 'Running PRreviewer.py for Pull Request...'
+                sh 'python3 PRreviewer.py'
             }
         }
     }
